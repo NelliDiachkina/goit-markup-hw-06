@@ -31,24 +31,36 @@
           </ul>
         </nav>
         <address class="address">
-          <ul class="menu">
-            <li>
+          <ul class="address-menu">
+            <li class="address-menu-item">
               <a href="mailto:info@devstudio.com" class="address-link">info@devstudio.com</a>
             </li>
-            <li>
+            <li class="address-menu-item">
               <a href="tel:+110001111111" class="address-link">+11 (000) 111-11-11</a>
             </li>
           </ul>
         </address>
+        <button type="button" class="burger-btn" aria-label="Menu open button">
+          <svg class="burger-btn-icon" width="24" height="24">
+            <use href="./images/icons.svg#burger"></use>
+          </svg>
+        </button>
       </div>
     </header>
+    <!--- Main --->
+
     <main>
-      <section class="section hero">
+      <!--- Hero --->
+
+      <section class="hero">
         <div class="container">
           <h1 class="hero-title">Effective Solutions for Your Business</h1>
           <button type="button" class="hero-button">Order Service</button>
         </div>
       </section>
+
+      <!--- Values --->
+
       <section class="section">
         <div class="container">
           <h2 class="visually-hidden">Our Values</h2>
@@ -104,15 +116,25 @@
           </ul>
         </div>
       </section>
+
+      <!--- Team --->
+
       <section class="section team">
         <div class="container">
           <h2 class="section-title">Our Team</h2>
-          <ul class="section-list">
+          <ul class="section-list team-list">
             <li class="section-list-item team-item">
-              <img src="./images/mark-guerrero.jpg" alt="Mark Guerrero" width="264" height="260" />
+              <img
+                srcset="./images/team/img-1@1x.jpg 1x, ./images/team/img-1@2x.jpg 2x"
+                src="./images/mark-guerrero.jpg"
+                alt="Mark Guerrero"
+                width="264"
+                height="260"
+                loading="lazy"
+              />
               <div class="section-list-item-content">
-                <h3 class="section-list-item-title">Mark Guerrero</h3>
-                <p class="text team-text">Product Designer</p>
+                <h3 class="team-caption">Mark Guerrero</h3>
+                <p class="team-text">Product Designer</p>
                 <ul class="team-socials-list">
                   <li class="team-socials-item">
                     <a
@@ -170,10 +192,17 @@
               </div>
             </li>
             <li class="section-list-item team-item">
-              <img src="./images/tom-ford.jpg" alt="Tom Ford" width="264" height="260" />
+              <img
+                srcset="./images/team/img-2@1x.jpg 1x, ./images/team/img-2@2x.jpg 2x"
+                src="./images/tom-ford.jpg"
+                alt="Tom Ford"
+                width="264"
+                height="260"
+                loading="lazy"
+              />
               <div class="section-list-item-content">
-                <h3 class="section-list-item-title">Tom Ford</h3>
-                <p class="text team-text">Frontend Developer</p>
+                <h3 class="team-caption">Tom Ford</h3>
+                <p class="team-text">Frontend Developer</p>
                 <ul class="team-socials-list">
                   <li class="team-socials-item">
                     <a
@@ -231,10 +260,17 @@
               </div>
             </li>
             <li class="section-list-item team-item">
-              <img src="./images/camila-garcia.jpg" alt="Camila Garcia" width="264" height="260" />
+              <img
+                srcset="./images/team/img-3@1x.jpg 1x, ./images/team/img-3@2x.jpg 2x"
+                src="./images/camila-garcia.jpg"
+                alt="Camila Garcia"
+                width="264"
+                height="260"
+                loading="lazy"
+              />
               <div class="section-list-item-content">
-                <h3 class="section-list-item-title">Camila Garcia</h3>
-                <p class="text team-text">Marketing</p>
+                <h3 class="team-caption">Camila Garcia</h3>
+                <p class="team-text">Marketing</p>
                 <ul class="team-socials-list">
                   <li class="team-socials-item">
                     <a
@@ -292,10 +328,17 @@
               </div>
             </li>
             <li class="section-list-item team-item">
-              <img src="./images/daniel-wilson.jpg" alt="Daniel Wilson" width="264" height="260" />
+              <img
+                srcset="./images/team/img-4@1x.jpg 1x, ./images/team/img-4@2x.jpg 2x"
+                src="./images/daniel-wilson.jpg"
+                alt="Daniel Wilson"
+                width="264"
+                height="260"
+                loading="lazy"
+              />
               <div class="section-list-item-content">
-                <h3 class="section-list-item-title">Daniel Wilson</h3>
-                <p class="text team-text">UI Designer</p>
+                <h3 class="team-caption">Daniel Wilson</h3>
+                <p class="team-text">UI Designer</p>
                 <ul class="team-socials-list">
                   <li class="team-socials-item">
                     <a
@@ -355,102 +398,290 @@
           </ul>
         </div>
       </section>
+
+      <!--- Portfolio --->
+
       <section class="section">
         <div class="container">
           <h2 class="section-title">Our Portfolio</h2>
           <ul class="section-list-portfolio">
             <li class="section-list-item-portfolio">
               <div class="portfolio-card-top">
-                <img src="./images/app.jpg" alt="Banking App" width="360" height="300" />
+                <picture>
+                  <!-- Desktop -->
+                  <source
+                    media="(min-width: 1158px)"
+                    srcset="
+                      ./images/portfolio/img-1_desk@1x.jpg 1x,
+                      ./images/portfolio/img-1_desk@2x.jpg 2x
+                    "
+                  />
+                  <!-- Tablet -->
+                  <source
+                    media="(min-width: 768px)"
+                    srcset="
+                      ./images/portfolio/img-1_tab@1x.jpg 1x,
+                      ./images/portfolio/img-1_tab@2x.jpg 2x
+                    "
+                  />
+                  <!-- Mobile -->
+                  <source
+                    media="(max-width: 767px)"
+                    srcset="
+                      ./images/portfolio/img-1_mob@1x.jpg 1x,
+                      ./images/portfolio/img-1_mob@2x.jpg 2x
+                    "
+                  />
+                  <img
+                    src="./images/app.jpg"
+                    alt="Banking App"
+                    width="360"
+                    height="300"
+                    loading="lazy"
+                  />
+                </picture>
                 <p class="portfolio-overlay portfolio-overlay-text">
                   14 Stylish and User-Friendly App Design Concepts · Task Manager App · Calorie
                   Tracker App · Exotic Fruit Ecommerce App · Cloud Storage App
                 </p>
               </div>
               <div class="portfolio-card">
-                <h3 class="section-list-item-title">Banking App</h3>
-                <p class="text">App</p>
+                <h3 class="portfolio-caption">Banking App</h3>
+                <p class="portfolio-text">App</p>
               </div>
             </li>
             <li class="section-list-item-portfolio">
               <div class="portfolio-card-top">
-                <img src="./images/marketing.jpg" alt="Cashless Payment" width="360" height="300" />
+                <picture>
+                  <!-- Desktop -->
+                  <source
+                    media="(min-width: 1158px)"
+                    srcset="
+                      ./images/portfolio/img-2_desk@1x.jpg 1x,
+                      ./images/portfolio/img-2_desk@2x.jpg 2x
+                    "
+                  />
+                  <!-- Tablet -->
+                  <source
+                    media="(min-width: 768px)"
+                    srcset="
+                      ./images/portfolio/img-2_tab@1x.jpg 1x,
+                      ./images/portfolio/img-2_tab@2x.jpg 2x
+                    "
+                  />
+                  <!-- Mobile -->
+                  <source
+                    media="(max-width: 767px)"
+                    srcset="
+                      ./images/portfolio/img-2_mob@1x.jpg 1x,
+                      ./images/portfolio/img-2_mob@2x.jpg 2x
+                    "
+                  />
+                  <img
+                    src="./images/marketing.jpg"
+                    alt="Cashless Payment"
+                    width="360"
+                    height="300"
+                    loading="lazy"
+                  />
+                </picture>
                 <p class="portfolio-overlay portfolio-overlay-text">
                   14 Stylish and User-Friendly App Design Concepts · Task Manager App · Calorie
                   Tracker App · Exotic Fruit Ecommerce App · Cloud Storage App
                 </p>
               </div>
               <div class="portfolio-card">
-                <h3 class="section-list-item-title">Cashless Payment</h3>
-                <p class="text">Marketing</p>
+                <h3 class="portfolio-caption">Cashless Payment</h3>
+                <p class="portfolio-text">Marketing</p>
               </div>
             </li>
             <li class="section-list-item-portfolio">
               <div class="portfolio-card-top">
-                <img
-                  src="./images/meditation-app.jpg"
-                  alt="Meditation App"
-                  width="360"
-                  height="300"
-                />
+                <picture>
+                  <!-- Desktop -->
+                  <source
+                    media="(min-width: 1158px)"
+                    srcset="
+                      ./images/portfolio/img-3_desk@1x.jpg 1x,
+                      ./images/portfolio/img-3_desk@2x.jpg 2x
+                    "
+                  />
+                  <!-- Tablet -->
+                  <source
+                    media="(min-width: 768px)"
+                    srcset="
+                      ./images/portfolio/img-3_tab@1x.jpg 1x,
+                      ./images/portfolio/img-3_tab@2x.jpg 2x
+                    "
+                  />
+                  <!-- Mobile -->
+                  <source
+                    media="(max-width: 767px)"
+                    srcset="
+                      ./images/portfolio/img-3_mob@1x.jpg 1x,
+                      ./images/portfolio/img-3_mob@2x.jpg 2x
+                    "
+                  />
+                  <img
+                    src="./images/meditation-app.jpg"
+                    alt="Meditation App"
+                    width="360"
+                    height="300"
+                    loading="lazy"
+                  />
+                </picture>
                 <p class="portfolio-overlay portfolio-overlay-text">
                   14 Stylish and User-Friendly App Design Concepts · Task Manager App · Calorie
                   Tracker App · Exotic Fruit Ecommerce App · Cloud Storage App
                 </p>
               </div>
               <div class="portfolio-card">
-                <h3 class="section-list-item-title">Meditation App</h3>
-                <p class="text">App</p>
+                <h3 class="portfolio-caption">Meditation App</h3>
+                <p class="portfolio-text">App</p>
               </div>
             </li>
             <li class="section-list-item-portfolio">
               <div class="portfolio-card-top">
-                <img src="./images/taxi.jpg" alt="Taxi Service" width="360" height="300" />
+                <picture>
+                  <!-- Desktop -->
+                  <source
+                    media="(min-width: 1158px)"
+                    srcset="
+                      ./images/portfolio/img-4_desk@1x.jpg 1x,
+                      ./images/portfolio/img-4_desk@2x.jpg 2x
+                    "
+                  />
+                  <!-- Tablet -->
+                  <source
+                    media="(min-width: 768px)"
+                    srcset="
+                      ./images/portfolio/img-4_tab@1x.jpg 1x,
+                      ./images/portfolio/img-4_tab@2x.jpg 2x
+                    "
+                  />
+                  <!-- Mobile -->
+                  <source
+                    media="(max-width: 767px)"
+                    srcset="
+                      ./images/portfolio/img-4_mob@1x.jpg 1x,
+                      ./images/portfolio/img-4_mob@2x.jpg 2x
+                    "
+                  />
+                  <img
+                    src="./images/taxi.jpg"
+                    alt="Taxi Service"
+                    width="360"
+                    height="300"
+                    loading="lazy"
+                  />
+                </picture>
                 <p class="portfolio-overlay portfolio-overlay-text">
                   14 Stylish and User-Friendly App Design Concepts · Task Manager App · Calorie
                   Tracker App · Exotic Fruit Ecommerce App · Cloud Storage App
                 </p>
               </div>
               <div class="portfolio-card">
-                <h3 class="section-list-item-title">Taxi Service</h3>
-                <p class="text">Marketing</p>
+                <h3 class="portfolio-caption">Taxi Service</h3>
+                <p class="portfolio-text">Marketing</p>
               </div>
             </li>
             <li class="section-list-item-portfolio">
               <div class="portfolio-card-top">
-                <img
-                  src="./images/screen.jpg"
-                  alt="Screen Illustrations"
-                  width="360"
-                  height="300"
-                />
+                <picture>
+                  <!-- Desktop -->
+                  <source
+                    media="(min-width: 1158px)"
+                    srcset="
+                      ./images/portfolio/img-5_desk@1x.jpg 1x,
+                      ./images/portfolio/img-5_desk@2x.jpg 2x
+                    "
+                  />
+                  <!-- Tablet -->
+                  <source
+                    media="(min-width: 768px)"
+                    srcset="
+                      ./images/portfolio/img-5_tab@1x.jpg 1x,
+                      ./images/portfolio/img-5_tab@2x.jpg 2x
+                    "
+                  />
+                  <!-- Mobile -->
+                  <source
+                    media="(max-width: 767px)"
+                    srcset="
+                      ./images/portfolio/img-5_mob@1x.jpg 1x,
+                      ./images/portfolio/img-5_mob@2x.jpg 2x
+                    "
+                  />
+                  <img
+                    src="./images/screen.jpg"
+                    alt="Screen Illustrations"
+                    width="360"
+                    height="300"
+                    loading="lazy"
+                  />
+                </picture>
                 <p class="portfolio-overlay portfolio-overlay-text">
                   14 Stylish and User-Friendly App Design Concepts · Task Manager App · Calorie
                   Tracker App · Exotic Fruit Ecommerce App · Cloud Storage App
                 </p>
               </div>
               <div class="portfolio-card">
-                <h3 class="section-list-item-title">Screen Illustrations</h3>
-                <p class="text">Design</p>
+                <h3 class="portfolio-caption">Screen Illustrations</h3>
+                <p class="portfolio-text">Design</p>
               </div>
             </li>
             <li class="section-list-item-portfolio">
               <div class="portfolio-card-top">
-                <img src="./images/online.jpg" alt="Online Courses" width="360" height="300" />
+                <picture>
+                  <!-- Desktop -->
+                  <source
+                    media="(min-width: 1158px)"
+                    srcset="
+                      ./images/portfolio/img-6_desk@1x.jpg 1x,
+                      ./images/portfolio/img-6_desk@2x.jpg 2x
+                    "
+                  />
+                  <!-- Tablet -->
+                  <source
+                    media="(min-width: 768px)"
+                    srcset="
+                      ./images/portfolio/img-6_tab@1x.jpg 1x,
+                      ./images/portfolio/img-6_tab@2x.jpg 2x
+                    "
+                  />
+                  <!-- Mobile -->
+                  <source
+                    media="(max-width: 767px)"
+                    srcset="
+                      ./images/portfolio/img-6_mob@1x.jpg 1x,
+                      ./images/portfolio/img-6_mob@2x.jpg 2x
+                    "
+                  />
+                  <img
+                    src="./images/online.jpg"
+                    alt="Online Courses"
+                    width="360"
+                    height="300"
+                    loading="lazy"
+                  />
+                </picture>
                 <p class="portfolio-overlay portfolio-overlay-text">
                   14 Stylish and User-Friendly App Design Concepts · Task Manager App · Calorie
                   Tracker App · Exotic Fruit Ecommerce App · Cloud Storage App
                 </p>
               </div>
               <div class="portfolio-card">
-                <h3 class="section-list-item-title">Online Courses</h3>
-                <p class="text">Marketing</p>
+                <h3 class="portfolio-caption">Online Courses</h3>
+                <p class="portfolio-text">Marketing</p>
               </div>
             </li>
           </ul>
         </div>
       </section>
     </main>
+
+    <!--- Footer --->
+
     <footer class="footer">
       <div class="container">
         <div class="footer-content">
@@ -538,6 +769,9 @@
         </div>
       </div>
     </footer>
+
+    <!--- Backdrop --->
+
     <div class="backdrop">
       <div class="modal">
         <button type="button" class="modal-btn" aria-label="Modal close button">
@@ -597,13 +831,97 @@
                   <use href="./images/icons.svg#checked"></use>
                 </svg>
               </span>
-              I accept the terms and conditions of the
-              <a href="" class="footer-checkbox-link"> Privacy Policy</a>
+              <span>
+                I accept the terms and conditions of the
+                <a href="" class="footer-checkbox-link">Privacy Policy</a>
+              </span>
             </label>
           </div>
           <button type="submit" class="form-btn">Send</button>
         </form>
       </div>
     </div>
+
+    <!--- Mobile menu --->
+
+    <div class="mobile-menu">
+      <button type="button" class="modal-btn" aria-label="Modal close button">
+        <svg class="modal-btn-icon" width="8" height="8">
+          <use href="./images/icons.svg#close"></use>
+        </svg>
+      </button>
+      <ul class="mobile-menu-nav">
+        <li><a href="./index.html" class="mobile-menu-link active">Studio</a></li>
+        <li><a href="" class="mobile-menu-link">Portfolio</a></li>
+        <li><a href="" class="mobile-menu-link">Contacts</a></li>
+      </ul>
+      <ul class="mobile-menu-contacts">
+        <li>
+          <a href="tel:+110001111111" class="mobile-menu-address-link active"
+            >+11 (000) 111-11-11
+          </a>
+        </li>
+        <li>
+          <a href="mailto:info@devstudio.com" class="mobile-menu-address-link"
+            >info@devstudio.com
+          </a>
+        </li>
+      </ul>
+      <ul class="team-socials-list">
+        <li class="team-socials-item">
+          <a
+            class="team-socials-link"
+            href="https://instagram.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Instagram site"
+          >
+            <svg class="team-socials-icon" width="16" height="16">
+              <use href="./images/icons.svg#instagram"></use>
+            </svg>
+          </a>
+        </li>
+        <li class="team-socials-item">
+          <a
+            class="team-socials-link"
+            href="https://twitter.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Twitter site"
+          >
+            <svg class="team-socials-icon" width="16" height="16">
+              <use href="./images/icons.svg#twitter"></use>
+            </svg>
+          </a>
+        </li>
+        <li class="team-socials-item">
+          <a
+            class="team-socials-link"
+            href="https://facebook.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Facebook site"
+          >
+            <svg class="team-socials-icon" width="16" height="16">
+              <use href="./images/icons.svg#facebook"></use>
+            </svg>
+          </a>
+        </li>
+        <li class="team-socials-item">
+          <a
+            class="team-socials-link"
+            href="https://linkedin.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Linkedin site"
+          >
+            <svg class="team-socials-icon" width="16" height="16">
+              <use href="./images/icons.svg#linkedin"></use>
+            </svg>
+          </a>
+        </li>
+      </ul>
+    </div>
+    <script src="./index.js"></script>
   </body>
 </html>
