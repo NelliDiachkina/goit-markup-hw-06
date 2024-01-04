@@ -290,9 +290,9 @@ img {
     padding: 112px 0;
   }
   .hero-title {
+    max-width: 496px;
     font-size: 56px;
     line-height: 1.07;
-    max-width: 496px;
   }
   .hero-button {
     margin: 36px auto 0 auto;
@@ -702,6 +702,7 @@ img {
   left: 50%;
   transform: translate(-50%, -50%);
   min-width: 288px;
+  max-width: 408px;
   min-height: 584px;
   border-radius: 4px;
   background: #fcfcfc;
@@ -712,7 +713,6 @@ img {
 }
 @media screen and (min-width: 768px) {
   .modal {
-    min-width: 408px;
     padding: 72px 24px 24px 24px;
   }
 }
