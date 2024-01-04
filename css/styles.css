@@ -79,6 +79,7 @@ img {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  max-width: 1158px;
 }
 .header {
   border-bottom: 1px solid #e7e9fc;
@@ -273,7 +274,6 @@ img {
   }
 }
 .hero-title {
-  max-width: 160px;
   margin: 0 auto;
   text-align: center;
   font-size: 36px;
@@ -335,7 +335,9 @@ img {
 }
 
 /* -- Values -- */
-
+.container.values {
+  max-width: 1158px;
+}
 .values-icon-wrapper {
   display: none;
 }
