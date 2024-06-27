@@ -1,1 +1,3 @@
-# goit-markup-hw-06
+## WEB STUDIO
+
+Adaptive one-page site with Mobile First design
