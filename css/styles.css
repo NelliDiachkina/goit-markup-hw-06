@@ -6,6 +6,10 @@ body {
   background-color: #ffffff;
   color: #434455;
 }
+.scroll-disabled {
+  overflow: hidden;
+}
+
 a {
   text-decoration: none;
   color: currentColor;

@@ -10,12 +10,13 @@ mobileNav.addEventListener('click', handleModalButtonClick);
 
 function toggleModal(element) {
   element.classList.toggle('is-open');
+  document.documentElement.classList.toggle('scroll-disabled');
 }
 
 function handleModalButtonClick(e) {
-  const target = e.target.closest('.modal-btn');
-  if (!target) return;
-
-  const modal = e.currentTarget;
-  toggleModal(modal);
+  if (e.target.closest('.modal-btn') || e.target.closest('.mobile-menu-link')) {
+    toggleModal(e.currentTarget);
+  } else if (e.currentTarget === modalWindow && e.target === modalWindow) {
+    toggleModal(modalWindow);
+  }
 }
